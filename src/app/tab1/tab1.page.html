@@ -1,17 +1,28 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-my-header [labName]="labName"></app-my-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <h4>Задано три числа. Якщо хоч одне з них парне, то знайти куб суми. В іншому випадку – суму кубів чисел, якщо сума їхніх цифр непарна.</h4>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-item>
+    <ion-label position="floating">Число 1</ion-label>
+    <ion-input type="number" [(ngModel)]="num1"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Число 2</ion-label>
+    <ion-input type="number" [(ngModel)]="num2"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Число 3</ion-label>
+    <ion-input type="number" [(ngModel)]="num3"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" (click)="calculate()">Обчислити</ion-button>
+
+  <ion-card *ngIf="errorMessage">
+    <ion-card-content>{{ errorMessage }}</ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="result !== null">
+    <ion-card-content>Результат: {{ result }}</ion-card-content>
+  </ion-card>
 </ion-content>

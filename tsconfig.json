@@ -12,13 +12,13 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
-    "declaration": false,
+    "declaration": false, 
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2022",
     "module": "es2020",
-    "lib": ["es2018", "dom"],
+    "lib": ["es2019", "dom"],
     "useDefineForClassFields": false
   },
   "angularCompilerOptions": {

@@ -1,11 +1,22 @@
 import { Component } from '@angular/core';
-import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
+import { IonicModule, MenuController } from '@ionic/angular';
 
 @Component({
+  standalone: true,
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  imports: [IonApp, IonRouterOutlet],
+  imports: [IonicModule],
 })
 export class AppComponent {
-  constructor() {}
+  labName: string = 'Лабораторна робота 1'; 
+
+  constructor(private menuController: MenuController) {}
+
+  openMenu() {
+    this.menuController.open('first'); 
+  }
+
+  updateLabName(name: string) {
+    this.labName = name; 
+  }
 }
