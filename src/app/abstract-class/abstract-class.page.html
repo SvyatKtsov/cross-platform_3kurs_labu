@@ -1,0 +1,17 @@
+<app-my-header [labName]="labName"></app-my-header>
+
+<ion-content>
+  <h1>Всі пристрої:</h1>
+  <div *ngFor="let appliance of appliances" class="top-appliance-card">
+    <p *ngFor="let key of getKeys(appliance)">
+      <strong>{{ key }}:</strong> {{ appliance[key] }}
+    </p>
+  </div>
+
+  <h2>Три найпотужніші пристрої:</h2>
+  <div *ngFor="let appliance of topPowerfulAppliances" class="top-appliance-card">
+    <p *ngFor="let key of getKeys(appliance)">
+      <strong>{{ key }}:</strong> {{ appliance[key] }}
+    </p>
+  </div>
+</ion-content>

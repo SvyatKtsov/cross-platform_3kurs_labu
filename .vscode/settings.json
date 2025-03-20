@@ -1,3 +1,16 @@
 {
-  "typescript.preferences.autoImportFileExcludePatterns": ["@ionic/angular/common", "@ionic/angular"]
+  "typescript.preferences.autoImportFileExcludePatterns": [
+    "@ionic/angular/common",
+    "@ionic/angular"
+  ],
+  "testExplorer.addToEditorContextMenu": true,
+  "karmaTestExplorer.testFiles": [
+    "**/*{.,-,_}{test,spec}.{ts,js}",
+    "**/{test,spec}{.,-,_}*.{ts,js}",
+    "\"src/**/*.ts\"",
+    "src/**/*.ts"
+  ],
+  "karmaTestExplorer.testFramework": "jasmine",
+  "karmaTestExplorer.testsBasePath": "src",
+  "karmaTestExplorer.autoWatchBatchDelay": 500
 }

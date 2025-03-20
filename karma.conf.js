@@ -27,13 +27,14 @@ module.exports = function (config) {
     coverageReporter: {
       dir: require('path').join(__dirname, './coverage/app'),
       subdir: '.',
-      reporters: [
+      reports: [
         { type: 'html' },
+        { type: 'lcovonly' },
         { type: 'text-summary' }
       ]
     },
     reporters: ['progress', 'kjhtml'],
-    port: 9876,
+    port: 9876, 
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
